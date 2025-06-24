@@ -14,7 +14,7 @@ const postRoutes =require("./routes/post")
 const uploadRoutes = require("./routes/upload")
 
 app.use(cors({
-    origin: "https://a80c-1-240-85-140.ngrok-free.app",
+    origin: "https://fullstack-website-2506.vercel.app",
     credentials: true,
 }));
 
