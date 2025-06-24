@@ -1,0 +1,178 @@
+.about-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 8rem 1rem;
+}
+
+.about-hero {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 6rem;
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, #0f172a);
+  }
+
+  .about-hero-text {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    color: white;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+.about-section {
+  margin-bottom: 6rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1e293b;
+  }
+}
+
+.about-intro .about-text {
+  max-width: 48rem;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #475569;
+  text-align: center;
+  p + p {
+    margin-top: 1.5rem;
+  }
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .value-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: 0.3s;
+
+    h3 {
+      color: #4f46e5;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #4b5563;
+      font-size: 1.125rem;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.about-vision {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #475569;
+    font-weight: 300;
+  }
+}
+
+.about-history {
+  .timeline {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &.right {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-box {
+      width: 50%;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+      border: 1px solid #f1f5f9;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+        color: #4f46e5;
+      }
+
+      p {
+        font-size: 1.125rem;
+        color: #334155;
+      }
+
+      &:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .timeline-dot {
+      width: 1rem;
+      height: 1rem;
+      background-color: #4f46e5;
+      border-radius: 9999px;
+    }
+  }
+}

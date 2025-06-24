@@ -1,0 +1,156 @@
+.leadership {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 8rem 1rem;
+  color: #1e293b;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #64748b;
+    }
+  }
+
+  .ceo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 6rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .ceo-text {
+      flex: 2;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .content {
+        font-size: 1.125rem;
+        color: #475569;
+        line-height: 1.75;
+
+        .signature {
+          font-weight: 600;
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .ceo-image {
+      flex: 1;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background: white;
+
+      img {
+        width: 100%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        display: block;
+      }
+
+      .caption {
+        padding: 1rem;
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+
+        p {
+          color: #4f46e5;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .executives,
+  .team {
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card {
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          background-color: #e2e8f0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-content {
+          padding: 1.5rem;
+
+          h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .position {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4f46e5;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #475569;
+          }
+        }
+      }
+    }
+  }
+}

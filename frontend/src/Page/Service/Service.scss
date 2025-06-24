@@ -1,0 +1,171 @@
+.services {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 8rem 1rem;
+
+  .services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: #64748b;
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .service-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      transition: transform 0.3s;
+
+      .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      &:hover {
+        transform: translateY(-0.5rem);
+      }
+    }
+  }
+
+  .services-why {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1e293b;
+      margin-bottom: 2rem;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+
+      .why-item {
+        background: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 1rem;
+
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #475569;
+        }
+      }
+    }
+  }
+
+  .services-process {
+    margin-top: 8rem;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      color: #1e293b;
+      margin-bottom: 3rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+
+      .process-step {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        text-align: left;
+
+        .step {
+          color: #2563eb;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          color: #475569;
+        }
+      }
+    }
+  }
+
+  .services-cta {
+    background: #2563eb;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 8rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      background: #fff;
+      color: #2563eb;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #e0f2fe;
+      }
+    }
+  }
+}
