@@ -21,7 +21,7 @@ const AdminContacts = () => {
 
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/contact", {
+        const response = await axios.get("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/contact", {
           withCredentials: true
         })
 
@@ -40,7 +40,7 @@ const AdminContacts = () => {
   const handleStatusUpdate = async (newStatus) => {
     try {
       await axios.put(
-        `http://localhost:3000/api/contact/${selectedContact._id}`,
+        `https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/contact/${selectedContact._id}`,
         { status: newStatus },
         { withCredentials: true }
       );
@@ -75,7 +75,7 @@ const AdminContacts = () => {
 
     if (result.isConfirmed) {
       try {
-        await axios.delete(`http://localhost:3000/api/contact/${id}`, {
+        await axios.delete(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/contact/${id}`, {
           withCredentials: true,
         });
 

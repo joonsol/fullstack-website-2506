@@ -50,7 +50,7 @@ const AdminCreatePost = () => {
           fileFormData.append("originalName", encodeURIComponent(file.name));
 
           const response = await axios.post(
-            "http://localhost:3000/api/upload/file",
+            "https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/file",
             fileFormData,
             {
               withCredentials: true,
@@ -74,7 +74,7 @@ const AdminCreatePost = () => {
         content: editorContent,
         fileUrl: uploadedFiles,
       };
-      await axios.post("http://localhost:3000/api/post",  {
+      await axios.post("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post",  {
         title: formData.title,
         content: editorContent,
         fileUrl: uploadedFiles,
@@ -165,7 +165,7 @@ const AdminCreatePost = () => {
                   try {
                     const imageData = new FormData();
                     imageData.append("image", blobInfo.blob());
-                    const res = await axios.post("http://localhost:3000/api/upload/image", imageData, {
+                    const res = await axios.post("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/image", imageData, {
                       withCredentials: true,
                       headers: { "Content-Type": "multipart/form-data" },
                     });

@@ -20,7 +20,7 @@ const AdminLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/login", formData, {
+      const response = await axios.post("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/auth/login", formData, {
         withCredentials: true,
       })
       if (response.data.user) {

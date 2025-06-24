@@ -17,7 +17,7 @@ const Board = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/post")
+        const response = await axios.get("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post")
         setPosts(response.data)
       } catch (error) {
         console.log("게시글 가져오기 실패:", error)

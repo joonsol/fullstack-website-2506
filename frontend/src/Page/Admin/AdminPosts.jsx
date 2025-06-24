@@ -13,7 +13,7 @@ const AdminPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/post")
+        const response = await axios.get("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post")
         setPosts(response.data)
       } catch (error) {
         console.log("게시글 가져오기 실패:", error)
@@ -36,7 +36,7 @@ const AdminPosts = () => {
     if (result.isConfirmed) {
       try {
          console.log("삭제 요청 ID:", id); // 디버깅용
-        await axios.delete(`http://localhost:3000/api/post/${id}`, {
+        await axios.delete(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`, {
           withCredentials: true
         });
         setPosts(posts.filter(post => post._id !== id));

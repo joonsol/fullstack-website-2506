@@ -22,7 +22,7 @@ const AdminEditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/post/${id}`)
+        const response = await axios.get(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`)
         setFormData({
           title: response.data.title,
           content: response.data.content,
@@ -75,7 +75,7 @@ const AdminEditPost = () => {
           fileFormData.append("originalName", encodeURIComponent(file.name));
 
           const response = await axios.post(
-            "http://localhost:3000/api/upload/file",
+            "https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/file",
             fileFormData,
             {
               withCredentials: true,
@@ -101,7 +101,7 @@ const AdminEditPost = () => {
         fileUrl: [...formData.existingFiles, ...uploadedFiles],
         currentImages: currentImages
       };
-      await axios.put(`http://localhost:3000/api/post/${id}`, postData, {
+      await axios.put(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`, postData, {
         title: formData.title,
         content: editorContent,
         fileUrl: uploadedFiles,
@@ -270,7 +270,7 @@ const AdminEditPost = () => {
                     const formData = new FormData();
                     formData.append("image", blobInfo.blob());
                     const response = await axios.post(
-                      "http://localhost:3000/api/upload/image",
+                      "https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/image",
                       formData,
                       {
                         withCredentials: true,

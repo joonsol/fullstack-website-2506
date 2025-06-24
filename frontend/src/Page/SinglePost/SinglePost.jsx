@@ -32,7 +32,7 @@ const SinglePost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const postResponse = await axios.get(`http://localhost:3000/api/post/${id}`);
+        const postResponse = await axios.get(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`);
         setPost(postResponse.data);
       } catch (error) {
         console.error("게시글 로딩 실패:", error);
