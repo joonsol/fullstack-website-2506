@@ -21,10 +21,9 @@ const AdminContacts = () => {
 
     const fetchContacts = async () => {
       try {
-        const response = await axios.get("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/contact", {
-          withCredentials: true
-        })
-
+          const response = await axios.get(`${import.meta.env.VITE_API_URL}/contact`, {
+        withCredentials: true
+      });
         setContacts(response.data)
       } catch (error) {
         console.log("문의글 가져오기 실패", error)

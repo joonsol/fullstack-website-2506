@@ -13,7 +13,7 @@ const AdminPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post")
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/post`)
         setPosts(response.data)
       } catch (error) {
         console.log("게시글 가져오기 실패:", error)

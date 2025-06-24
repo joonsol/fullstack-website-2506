@@ -39,7 +39,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/contact",
+        `${import.meta.env.VITE_API_URL}/contact`,
         formData
       )
 

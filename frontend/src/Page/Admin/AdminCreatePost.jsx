@@ -165,7 +165,7 @@ const AdminCreatePost = () => {
                   try {
                     const imageData = new FormData();
                     imageData.append("image", blobInfo.blob());
-                    const res = await axios.post("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/image", imageData, {
+                    const res = await axios.post(`${import.meta.env.VITE_API_URL}/upload/image`, imageData, {
                       withCredentials: true,
                       headers: { "Content-Type": "multipart/form-data" },
                     });

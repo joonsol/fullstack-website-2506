@@ -22,7 +22,7 @@ const AdminEditPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`)
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/post/${id}`)
         setFormData({
           title: response.data.title,
           content: response.data.content,
@@ -75,7 +75,7 @@ const AdminEditPost = () => {
           fileFormData.append("originalName", encodeURIComponent(file.name));
 
           const response = await axios.post(
-            "https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/upload/file",
+            `${import.meta.env.VITE_API_URL}/upload/file`,
             fileFormData,
             {
               withCredentials: true,
@@ -101,7 +101,7 @@ const AdminEditPost = () => {
         fileUrl: [...formData.existingFiles, ...uploadedFiles],
         currentImages: currentImages
       };
-      await axios.put(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`, postData, {
+      await axios.put(`${import.meta.env.VITE_API_URL}/post/${id}`, postData, {
         title: formData.title,
         content: editorContent,
         fileUrl: uploadedFiles,

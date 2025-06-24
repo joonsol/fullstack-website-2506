@@ -54,7 +54,7 @@ function ProtectedRoute() {
   useEffect(() => {
     const verifytoken = async () => {
       try {
-        const response = await axios.post("https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/auth/verify-token", {}, {
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {}, {
           withCredentials: true
         })
         setIsAuthenticated(response.data.isValid)
