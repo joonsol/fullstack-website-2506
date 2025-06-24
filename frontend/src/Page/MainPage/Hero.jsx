@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Hero.scss";
 import HeroImage from "../../assets/Human1.jpg"; // 경로에 맞게 수정 필요
 import { motion } from "framer-motion";
-import translations from "../../Locale/hero.json"
+import translations from "../../Locale/Hero.json"
 const stats = [
   { key: "installations" },
   { key: "satisfaction" },
