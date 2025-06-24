@@ -36,7 +36,7 @@ const AdminPosts = () => {
     if (result.isConfirmed) {
       try {
          console.log("삭제 요청 ID:", id); // 디버깅용
-        await axios.delete(`https://port-0-fullstack-website-2506-mca4f9ad87f2d72b.sel5.cloudtype.app/api/post/${id}`, {
+        await axios.delete(`${import.meta.env.VITE_API_URL}/post/${id}`, {
           withCredentials: true
         });
         setPosts(posts.filter(post => post._id !== id));

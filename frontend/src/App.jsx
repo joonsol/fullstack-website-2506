@@ -31,7 +31,7 @@ function AuthRedirectRoute() {
   useEffect(() => {
     const verifytoken = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/api/auth/verify-token", {}, {
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/verify-token`, {}, {
           withCredentials: true
         })
         setIsAuthenticated(true)
